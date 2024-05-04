@@ -6,8 +6,9 @@ const Login = () => {
     const [username, setUsername] = useState("");
 
     const setUsernameHandler = (event) => {
-        setUsername(event.target.value);
-        username.toLowerCase().includes("o") ? alert("Por favor, ¡Nombres de usuario sin letra 'o'!") : 0;
+        const updatedUsername = event.target.value;
+        setUsername(updatedUsername);
+        updatedUsername.toLowerCase().includes("o") ? alert("Por favor, ¡Nombres de usuario sin letra 'o'!") : 0;
     }
 
     const submitUsernameHandler = (event) => {
